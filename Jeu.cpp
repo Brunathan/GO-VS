@@ -191,7 +191,7 @@ void Jeu::rafraichir(Plateau* plat, Coord LastC)
 
         if(Haut.y>0 && estVivant(C,*plat)==false)
         {
-            for(int k=0;k<T.size();k++)
+            for(unsigned int k=0;k<T.size();k++)
             {
                 C.x=T[k].x;
                 C.y=T[k].y;
@@ -218,7 +218,7 @@ void Jeu::rafraichir(Plateau* plat, Coord LastC)
 
         if(Bas.y<plat->getTaille() && estVivant(C,*plat)==false)
         {
-            for(int k=0;k<T.size();k++)
+            for(unsigned int k=0;k<T.size();k++)
             {
                 C.x=T[k].x;
                 C.y=T[k].y;
@@ -245,7 +245,7 @@ void Jeu::rafraichir(Plateau* plat, Coord LastC)
 
         if(Gauche.x>0 && estVivant(C,*plat)==false)
         {
-            for(int k=0;k<T.size();k++)
+            for(unsigned int k=0;k<T.size();k++)
             {
                 C.x=T[k].x;
                 C.y=T[k].y;
@@ -271,7 +271,7 @@ void Jeu::rafraichir(Plateau* plat, Coord LastC)
 
         if(Droite.x<plat->getTaille() && estVivant(C,*plat)==false)
         {
-            for(int k=0;k<T.size();k++)
+            for(unsigned int k=0;k<T.size();k++)
             {
                 C.x=T[k].x;
                 C.y=T[k].y;
@@ -303,7 +303,7 @@ void Jeu::rafraichir(Plateau* plat, Coord LastC)
             
             if(estVivant(C,*plat)==false)
             {
-                for(int k=0;k<T.size();k++)
+                for(unsigned int k=0;k<T.size();k++)
                 {
                     C.x=T[k].x;
                     C.y=T[k].y;

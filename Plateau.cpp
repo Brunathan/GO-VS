@@ -13,13 +13,13 @@ Plateau::Plateau()
 {
     taille=19;
     tab=new int*[taille]; // création de taille tableau
-    for(unsigned int i=0;i<taille;i++)
+    for(int i=0;i<taille;i++)
     {
         tab[i]=new int[taille]; // création de taille case dans chaque tableau
     }
-    for(unsigned int i=0;i<taille;i++)
+    for(int i=0;i<taille;i++)
     {
-        for(unsigned int j=0;j<taille;j++)
+        for(int j=0;j<taille;j++)
         {
             tab[i][j]=0; // Initialisation à 0 du tableau
         }
@@ -31,7 +31,7 @@ Plateau::Plateau(const Plateau& P)
     Coord C;
     taille=P.getTaille();
     tab=new int*[taille]; // création de taille tableau
-    for(unsigned int i=0;i<taille;i++)
+    for(int i=0;i<taille;i++)
     {
         tab[i]=new int[taille]; // création de taille case dans chaque tableau
     }
@@ -48,13 +48,13 @@ Plateau::Plateau(int _taille)
 {
     taille=_taille;
     tab=new int*[taille];// création de taille tableau
-    for(unsigned int i=0;i<taille;i++)
+    for(int i=0;i<taille;i++)
     {
         tab[i]=new int[taille]; // création de taille case dans chaque tableau
     }
-     for(unsigned int i=0;i<taille;i++)
+     for(int i=0;i<taille;i++)
      {
-        for(unsigned int j=0;j<taille;j++)
+        for(int j=0;j<taille;j++)
         {
             tab[i][j]=0;// Initialisation à 0 du tableau
         }
@@ -85,16 +85,16 @@ void Plateau::supprimerPion(Coord C)
 // Méthode d'affichage du plateau
 void Plateau::affichage()
 {
-    for (unsigned int i=0;i<taille;i++) 
+    for (int i=0;i<taille;i++) 
     {
     cout<<" "<<i+1;
     }
     cout<<" X"<<endl;
-    for(unsigned int j=0;j<taille;j++) // appel taille fois à la rédaction d'une ligne
+    for(int j=0;j<taille;j++) // appel taille fois à la rédaction d'une ligne
     {
         cout<<j+1;
 
-        for(unsigned int i=0;i<taille;i++) // rédaction d'une ligne
+        for(int i=0;i<taille;i++) // rédaction d'une ligne
         {
             if(tab[i][j] == -1)     cout<<"O "; // O correspond au joueur Blanc
             if(tab[i][j] ==  1)     cout<<"X "; // X correspond au joueur Noir
